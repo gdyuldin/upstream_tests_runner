@@ -5,5 +5,5 @@ TEST_DIR=${TEST_DIR:?Test deit sould be defined}
 
 PACKAGE_DIR=$(python -c "import $PACKAGE; print $PACKAGE.__path__[0]")
 
-py.test ${PACKAGE_DIR}/${TEST_DIR} $*
+py.test -rapP --tb=no --color=yes ${PACKAGE_DIR}/${TEST_DIR} $*
 
